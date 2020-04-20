@@ -26,8 +26,23 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: chpont3
-github_username:  chponte
+
+socials:
+  - title: Email
+    icon: fas fa-envelope
+    url: mailto:christian.ponte@udc.es
+  - title: Twitter
+    icon: fab fa-twitter
+    url: https://twitter.com/chpont3
+  - title: Github
+    icon: fab fa-github
+    url: https://github.com/chponte
+  - title: ORCID
+    icon: fab fa-orcid
+    url: https://orcid.org/0000-0002-4728-6398
+  - title: ResearchGate
+    icon: fab fa-researchgate
+    url: https://www.researchgate.net/profile/Christian_Ponte-Fernandez
 
 # Build settings
 plugins:
