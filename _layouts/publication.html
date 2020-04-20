@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<main>
+    <h1>
+        {% if page.type == "journal" and page.openaccess == true %}
+            <i class="fas fa-unlock-alt"></i>
+        {% endif %}
+        {{ page.title }}
+    </h1>
+    {% if page.type == "journal" %}
+        <span class="badge-label">Journal: {{ page.journal }}</span>
+    {% else %}
+        Conference: {{ page.conference }}.
+    {% endif %}
+    <a href="https://doi.org/{{ page.doi }}">doi: {{ page.doi }}</a>
+    <h2>Authors</h2>
+    <ul>
+        {% assign authors = page.authors | split: ", " %}
+        {% for author in authors %}
+        <li>{{ author }}</li>
+        {% endfor %}
+      </ul>
+
+    {{ content }}
+
+    <a href="https://doi.org/{{ page.doi }}">Full text ⟶</a>
+    {% if page.software_res %}
+        <a href="{{ "software/" | append: page.software_res | absolute_url }}">
+            Software package ⟶
+        </a>
+    {% endif %}
+</main>
+

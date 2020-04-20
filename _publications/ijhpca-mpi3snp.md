@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: publication
 type: journal
 title:  "Fast search of third-order epistatic interactions on CPU and GPU clusters"
 authors: "Christian Ponte-Fernández, Jorge González-Domínguez, María J. Martín"
