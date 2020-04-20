@@ -24,11 +24,16 @@ socials:
 
 # Build settings
 plugins:
-  - jekyll-feed
+  - jekyll-analytics
 
 collections:
   publications:
     output: true
+
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-129572314-1
+    anonymizeIp: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
