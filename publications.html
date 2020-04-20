@@ -1,0 +1,47 @@
+---
+layout: default
+title: Publications
+nav_order: 2
+permalink: /publications/
+---
+
+<main class="list">
+    <h1>Journal papers:</h1>
+    {% assign publications = site.publications |
+        where: "type", "journal" |
+        sort:"date" |
+        reverse %}
+    {% for p in publications %}
+    <section class="list-item">
+        <h2 class="title">
+            <a href="{{ p.url | absolute_url }}">
+                {% if p.openaccess == true %}
+                <i class="fas fa-unlock-alt"></i>
+                {% endif %}
+                {{ p.title }}
+            </a>
+            <br>
+            <i>{{ p.authors }}</i>
+        </h2>
+        <span class="badge-label">Journal: {{ p.journal }}</span>
+        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+    </section>
+    {% endfor %}
+
+    <h1>Conference papers:</h1>
+    {% assign publications = site.publications |
+        where: "type", "conference" |
+        sort:"date" |
+        reverse %}
+    {% for p in publications %}
+    <section class="list-item">
+        <h2 class="title">
+            <a href="{{ p.url | absolute_url }}"> {{ p.title }}</a>
+            <br>
+            <i>{{ p.authors }}</i>
+        </h2>
+        <span class="badge-label">Conference: {{ p.conference }}</span>
+        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+    </section>
+    {% endfor %}
+</main>
