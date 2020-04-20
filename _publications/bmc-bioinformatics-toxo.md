@@ -8,7 +8,6 @@ doi: 10.1186/s12859-020-3456-3
 date: 2020-04-09
 openaccess: true
 highlighted: true
-software_res: matlab-toxo
 ---
 
 ## Abstract

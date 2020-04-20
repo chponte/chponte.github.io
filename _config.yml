@@ -3,7 +3,7 @@ email: christian.ponte@udc.es
 description: >- # this means to ignore newlines until "baseurl:"
   I'm a PhD student at Universidade da Coruña, under the direction of Dr. María J. Martín Santamaría and Dr. Jorge González Domínguez.
 baseurl: ""
-url: "https://chponte.github.io/"
+url: "https://chponte.github.io"
 
 socials:
   - title: Email
