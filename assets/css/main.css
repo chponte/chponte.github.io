@@ -150,17 +150,31 @@ header nav {
   text-align: right;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
+main {
+  margin-bottom: 4em;
+}
+
+h1 {
+  font-size: 1.35rem;
   margin-top: 2em;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
-h2::before { color: var(--maincolor); content: '## '; }
-h3::before { color: var(--maincolor); content: '### '; }
-h4::before { color: var(--maincolor); content: '#### '; }
-h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h2, h3, h4, h5, h6 {
+  font-size: 1.15rem;
+  margin-top: 1.75em;
+}
+
+h2 i {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+h1::before { color: var(--maincolor); }
+h2::before { color: var(--maincolor); content: '# '; }
+h3::before { color: var(--maincolor); content: '## '; }
+h4::before { color: var(--maincolor); content: '### '; }
+h5::before { color: var(--maincolor); content: '#### '; }
+h6::before { color: var(--maincolor); content: '##### '; }
 
 /* Footer */
 footer {
@@ -223,7 +237,7 @@ svg{
 .soc:hover{
   color: white;
 }
-.draft-label{ 
+.badge-label{ 
     color: var(--bordercl);
     text-decoration: none;
     padding: 2px 4px;

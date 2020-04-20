@@ -4,32 +4,38 @@ title: Home
 nav_order: 1
 permalink: /
 ---
-<main class="container">
-  <div class="row">
-    <div class="col-2">
-      <h1>{{ site.title }}</h1>
-      <p class="lead">
-          <br/>{{ site.desc }}
-      </p>
-      Journal papers:
-      {% assign papers = site.publications | where: "type", "journal" %}
-      {% for paper in papers %}
-      <article>
-        <h1>{{ paper.title }}</h1>
-        <p>{{ paper.date }}</p>
-        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
-      </article>
-      {% endfor %}
-
-      Conference papers:
-      {% assign papers = site.publications | where: "type", "conference" %}
-      {% for paper in papers %}
-      <article>
-        <h1>{{ paper.title }}</h1>
-        <p>{{ paper.date }}</p>
-        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
-      </article>
-      {% endfor %}
+<main class="list">
+    <div class="site-description">
+        <p>
+            {{ site.description }}
+        </p>
     </div>
-  </div>
+
+    <h1>Highlighted publications</h1>
+    {% assign publications = site.publications |
+        where: "highlighted", "true" |
+        sort:"date" |
+        reverse %}
+    {% for p in publications %}
+    <section class="list-item">
+        <h2 class="title">
+            <a href="{{ p.url | absolute_url }}">
+                {% if p.type == "journal" and p.openaccess == true %}
+                    <i class="fas fa-unlock-alt"></i>
+                {% endif %}
+                {{ p.title }}
+            </a>
+            <br>
+            <i>{{ p.authors }}</i>
+        </h1>
+        <span class="description">
+            {% if p.type == "journal" %}
+                <span class="badge-label">Journal: {{ p.journal }}</span>
+            {% else %}
+                Conference: {{ p.conference }}.
+            {% endif %}
+        </span>
+        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+    </section>
+    {% endfor %}
 </main>
