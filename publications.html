@@ -5,15 +5,43 @@ nav_order: 2
 permalink: /publications/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<main class="list">
+    <h1>Journal papers:</h1>
+    {% assign publications = site.publications |
+        where: "type", "journal" |
+        sort:"date" |
+        reverse %}
+    {% for p in publications %}
+    <section class="list-item">
+        <h2 class="title">
+            <a href="{{ p.url | absolute_url }}">
+                {% if p.openaccess == true %}
+                <i class="fas fa-unlock-alt"></i>
+                {% endif %}
+                {{ p.title }}
+            </a>
+            <br>
+            <i>{{ p.authors }}</i>
+        </h2>
+        <span class="badge-label">Journal: {{ p.journal }}</span>
+        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+    </section>
+    {% endfor %}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+    <h1>Conference papers:</h1>
+    {% assign publications = site.publications |
+        where: "type", "conference" |
+        sort:"date" |
+        reverse %}
+    {% for p in publications %}
+    <section class="list-item">
+        <h2 class="title">
+            <a href="{{ p.url | absolute_url }}"> {{ p.title }}</a>
+            <br>
+            <i>{{ p.authors }}</i>
+        </h2>
+        <span class="badge-label">Conference: {{ p.conference }}</span>
+        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+    </section>
+    {% endfor %}
+</main>

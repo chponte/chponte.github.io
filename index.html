@@ -11,7 +11,7 @@ permalink: /
         </p>
     </div>
 
-    <h1>Highlighted publications</h1>
+    <h1>Highlighted publications:</h1>
     {% assign publications = site.publications |
         where: "highlighted", "true" |
         sort:"date" |
@@ -21,21 +21,19 @@ permalink: /
         <h2 class="title">
             <a href="{{ p.url | absolute_url }}">
                 {% if p.type == "journal" and p.openaccess == true %}
-                    <i class="fas fa-unlock-alt"></i>
+                <i class="fas fa-unlock-alt"></i>
                 {% endif %}
                 {{ p.title }}
             </a>
             <br>
             <i>{{ p.authors }}</i>
-        </h1>
-        <span class="description">
+            </h1>
             {% if p.type == "journal" %}
-                <span class="badge-label">Journal: {{ p.journal }}</span>
+            <span class="badge-label">Journal: {{ p.journal }}</span>
             {% else %}
-                Conference: {{ p.conference }}.
+            <span class="badge-label">Conference: {{ p.conference }}</span>
             {% endif %}
-        </span>
-        <time>{{ p.date | date: "%-d %B %Y" }}</time>
+            <time>{{ p.date | date: "%-d %B %Y" }}</time>
     </section>
     {% endfor %}
 </main>
