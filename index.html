@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main class="container">
+  <div class="row">
+    <div class="col-2">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">
+          <br/>{{ site.desc }}
+      </p>
+      Journal papers:
+      {% assign papers = site.publications | where: "type", "journal" %}
+      {% for paper in papers %}
+      <article>
+        <h1>{{ paper.title }}</h1>
+        <p>{{ paper.date }}</p>
+        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
+      </article>
+      {% endfor %}
+
+      Conference papers:
+      {% assign papers = site.publications | where: "type", "conference" %}
+      {% for paper in papers %}
+      <article>
+        <h1>{{ paper.title }}</h1>
+        <p>{{ paper.date }}</p>
+        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</main>
