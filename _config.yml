@@ -29,6 +29,8 @@ plugins:
 collections:
   publications:
     output: true
+  software:
+    output: false
 
 jekyll_analytics:
   GoogleAnalytics:

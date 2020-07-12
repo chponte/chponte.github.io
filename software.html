@@ -6,3 +6,9 @@ permalink: /software/
 ---
 
 <h2>TODO</h2>
+
+{% for sw in site.software %}
+
+{{ sw.external_url }}
+
+{% endfor %}
