@@ -1,7 +1,11 @@
 title: Christian Ponte
 email: christian.ponte@udc.es
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm a PhD student at Universidade da Coruña, under the direction of Dr. María J. Martín Santamaría and Dr. Jorge González Domínguez.
+  Welcome to my personal page. I'm Christian, a PhD student at Universidade da
+  Coruña, under the direction of Dr. María J. Martín Santamaría and Dr. Jorge
+  González Domínguez. My research is focused on epistasis interactions in GWAS,
+  from its genetic architecture, simulation models and detection methods. In my
+  free time I also like to contribute to open source projects.
 baseurl: ""
 url: "https://chponte.github.io"
 
