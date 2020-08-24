@@ -64,7 +64,7 @@ ul li {
 }
 
 
-ul li .info {
+span.info {
   font-family: 'Roboto Mono', monospace;
   font-weight: 300;
   font-size: 16px;
@@ -73,10 +73,6 @@ ul li .info {
 ul li h2 {
   margin-top: 0;
 }
-/* ul li::before {
-  content: '* ';
-  font-weight: bold;
-} */
 
 /* Images */
 img {

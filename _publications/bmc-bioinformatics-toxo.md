@@ -2,7 +2,7 @@
 layout: publication
 type: journal
 title:  "Toxo: a library for calculating penetrance tables of high-order epistasis models"
-authors: "Christian Ponte-Fernández, Jorge González-Domínguez, Antonio Carvajal-Rodríguez, María J. Martín"
+authors: chponte, jgonzalezd, acr, mariam
 journal: "BMC Bioinformatics"
 shortjournal: "BMC Bioinformatics"
 doi: 10.1186/s12859-020-3456-3

@@ -2,7 +2,7 @@
 layout: publication
 type: conference
 title:  "Evaluation of OpenMP SIMD Directives on Xeon Phi Coprocessors"
-authors: "Christian Ponte-Fernández, Jorge González-Domínguez, María J. Martín"
+authors: chponte, jgonzalezd, mariam
 conference: "2017 International Conference on High Performance Computing & Simulation"
 shortconference: "HPCS 2017"
 doi: 10.1109/HPCS.2017.65
@@ -30,4 +30,4 @@ abstract: |
 
 ## Abstract
 
-> 
+{{ page.abstract }}

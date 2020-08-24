@@ -24,7 +24,10 @@ permalink: /publications/
                 <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
             </h2>
             <span class="info">
-                {{ p.authors }}
+                {% assign authors = p.authors | split: ", " %}
+                {% for author in authors %}
+                {{ site.data.authors[author].authorname }}
+                {% endfor %}
             </span>
         </li>
         <p>
@@ -48,7 +51,10 @@ permalink: /publications/
                 <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
             </h2>
             <span class="info">
-                {{ p.authors }}
+                {% assign authors = p.authors | split: ", " %}
+                {% for author in authors %}
+                {{ site.data.authors[author].authorname }}
+                {% endfor %}
             </span>
         </li>
         <p>

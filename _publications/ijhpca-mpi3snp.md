@@ -2,7 +2,7 @@
 layout: publication
 type: journal
 title:  "Fast search of third-order epistatic interactions on CPU and GPU clusters"
-authors: "Christian Ponte-Fernández, Jorge González-Domínguez, María J. Martín"
+authors: chponte, jgonzalezd, mariam
 journal: "The International Journal of High Performance Computing Applications"
 shortjournal: "IJHPCA"
 doi: 10.1177/1094342019852128
