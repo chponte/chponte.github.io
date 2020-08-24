@@ -8,11 +8,12 @@
 }
 html {
   color: #232333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-family: 'PT Serif', serif;
+  font-size: 17px;
+  font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
+  line-height: 1.25;
 }
 
 body{
@@ -57,13 +58,25 @@ ul {
   list-style: none;
   padding-left: 2ch;
 }
+
 ul li {
   text-indent: -2ch;
 }
-ul li::before {
+
+
+ul li .info {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+ul li h2 {
+  margin-top: 0;
+}
+/* ul li::before {
   content: '* ';
   font-weight: bold;
-}
+} */
 
 /* Images */
 img {
@@ -138,29 +151,17 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 34px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 31px;
 }
 
-header div.main a {
-  font-weight: 700;
-  font-size: 31px;
-  vertical-align: text-top;
+header div.main {
+  font-weight: 400;
 }
 
 header nav {
   text-align: right;
-}
-
-header nav a {
-  font-weight: 600;
-  font-size: 25px;
-  margin-left: 5px;
-  vertical-align: text-top;
-}
-
-header nav i {
-  font-size: 22px;
 }
 
 main {
@@ -168,35 +169,25 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
-h1 {
-  font-size: 1.35rem;
-  margin-top: 2em;
+h1::before {
+  color: var(--maincolor);
+  content: '# ';
+  margin-left: -40px;
 }
 
-h2 {
-  font-size: 1.225rem;
-  margin-top: 1.75em;
+div.socials {
+  text-align: center;
+  padding-block-end: 10px;
 }
-
-h3, h4, h5, h6 {
-  font-size: 1.15rem;
-  margin-top: 1.75em;
-}
-
-h2 i {
-  font-size: 1.05rem;
-  font-weight: 400;
-}
-
-h2::before { color: var(--maincolor); content: '# '; }
 
 /* Footer */
 footer {
   margin-top: 1em;
+  text-align: center;
 }
 
 /* Common */

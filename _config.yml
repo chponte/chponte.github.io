@@ -23,7 +23,7 @@ socials:
     icon: fab fa-orcid
     url: https://orcid.org/0000-0002-4728-6398
   - title: ResearchGate
-    icon: fab fa-researchgate
+    icon: ai ai-researchgate
     url: https://www.researchgate.net/profile/Christian_Ponte-Fernandez
 
 # Build settings

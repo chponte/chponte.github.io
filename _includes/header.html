@@ -1,17 +1,13 @@
 <header>
-<div class="main">
-    <a href="{{ site.url }}">{{ site.title }}</a>
-</div>
-<nav>
-    {% assign pages = site.html_pages | sort:"nav_order" %}
-    {% for page in pages %}
-        {% unless page.nav_exclude %}
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        {% endunless %}
-    {% endfor %}
-    <br>
-    {% for s in site.socials %}
-        <a href="{{ s.url }}" title="{{ s.title }}"><i class="{{ s.icon }}"></i></a>
-    {% endfor %}
-</nav>
+    <div class="main">
+        <a href="{{ site.url }}">{{ site.title | upcase }}</a>
+    </div>
+    <nav>
+        {% assign pages = site.html_pages | sort:"nav_order" %}
+        {% for page in pages %}
+            {% unless page.nav_exclude %}
+                <a href="{{ page.url }}">{{ page.title | downcase }}</a>
+            {% endunless %}
+        {% endfor %}
+    </nav>
 </header>
