@@ -11,37 +11,49 @@ permalink: /publications/
         where: "type", "journal" |
         sort:"date" |
         reverse %}
-    {% for p in publications %}
-    <section class="list-item">
-        <h2 class="title">
-            <a href="{{ p.url | absolute_url }}">
-                {% if p.openaccess == true %}
-                <i class="fas fa-unlock-alt"></i>
-                {% endif %}
-                {{ p.title }}
-            </a>
-            <br>
-            <i>{{ p.authors }}</i>
-        </h2>
-        <span class="badge-label">Journal: {{ p.journal }}</span>
-        <time>{{ p.date | date: "%-d %B %Y" }}</time>
-    </section>
-    {% endfor %}
+    <ul>
+        {% for p in publications %}
+        <li>
+            {% if p.openaccess == true %}
+            <i class="ai ai-open-access fa-2x fa-fw "></i>
+            {% endif %}
+            <span class="info">
+                {{ p.shortjournal }} :: {{ p.date | date: "%-d %B %Y" }}
+            </span>
+            <h2 class="title">
+                <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
+            </h2>
+            <span class="info">
+                {{ p.authors }}
+            </span>
+        </li>
+        <p>
+            {{ p.abstract | truncatewords: 75 }}
+        </p>
+        {% endfor %}
+    </ul>
 
     <h1>Conference papers:</h1>
     {% assign publications = site.publications |
         where: "type", "conference" |
         sort:"date" |
         reverse %}
-    {% for p in publications %}
-    <section class="list-item">
-        <h2 class="title">
-            <a href="{{ p.url | absolute_url }}"> {{ p.title }}</a>
-            <br>
-            <i>{{ p.authors }}</i>
-        </h2>
-        <span class="badge-label">Conference: {{ p.conference }}</span>
-        <time>{{ p.date | date: "%-d %B %Y" }}</time>
-    </section>
-    {% endfor %}
+    <ul>
+        {% for p in publications %}
+        <li>
+            <span class="info">
+                {{ p.shortconference }} :: {{ p.date | date: "%-d %B %Y" }}
+            </span>
+            <h2 class="title">
+                <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
+            </h2>
+            <span class="info">
+                {{ p.authors }}
+            </span>
+        </li>
+        <p>
+            {{ p.abstract | truncatewords: 75 }}
+        </p>
+        {% endfor %}
+    </ul>
 </main>
