@@ -4,6 +4,7 @@ title: Home
 nav_order: 1
 permalink: /
 ---
+
 <main class="list">
     <div class="site-description">
         <p>
@@ -11,29 +12,47 @@ permalink: /
         </p>
     </div>
 
-    <h1>Highlighted publications:</h1>
+    <div class="socials">
+        {% for s in site.socials %}
+        <a href="{{ s.url }}" title="{{ s.title }}"><i class="{{ s.icon }}"></i></a>
+        {% endfor %}
+    </div>
+
+    <h1>Highlighted publications</h1>
     {% assign publications = site.publications |
         where: "highlighted", "true" |
         sort:"date" |
         reverse %}
-    {% for p in publications %}
-    <section class="list-item">
-        <h2 class="title">
-            <a href="{{ p.url | absolute_url }}">
-                {% if p.type == "journal" and p.openaccess == true %}
-                <i class="fas fa-unlock-alt"></i>
-                {% endif %}
-                {{ p.title }}
-            </a>
-            <br>
-            <i>{{ p.authors }}</i>
-            </h1>
+    <ul>
+        {% for p in publications %}
+        <li>
             {% if p.type == "journal" %}
-            <span class="badge-label">Journal: {{ p.journal }}</span>
-            {% else %}
-            <span class="badge-label">Conference: {{ p.conference }}</span>
+            {% if p.openaccess == true %}
+            <i class="ai ai-open-access fa-2x fa-fw "></i>
             {% endif %}
-            <time>{{ p.date | date: "%-d %B %Y" }}</time>
-    </section>
-    {% endfor %}
+            <span class="info">
+                {{ p.shortjournal }} :: {{ p.date | date: "%-d %B %Y" }}
+            </span>
+            {% else %}
+            <span class="info">
+                {{ p.shortconference }} :: {{ p.date | date: "%-d %B %Y" }}
+            </span>
+            {% endif %}
+            <h2 class="title">
+                <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
+            </h2>
+            <span class="info">
+                {% assign authors = p.authors | split: ", " %}
+                {% for author in authors %}
+                {{ site.data.authors[author].authorname }}
+                {% endfor %}
+            </span>
+        </li>
+        <p>
+            {{ p.abstract | truncatewords: 75 }}
+        </p>
+        {% endfor %}
+    </ul>
+
+    <h1>Highlighted software</h1>
 </main>
