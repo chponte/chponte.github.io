@@ -10,90 +10,119 @@
     <!-- <meta property="og:description" content> -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chponte.github.io">
-    <meta property="og:updated_time" content="2020-04-20T23:44:25+00:00">
+    <meta property="og:updated_time" content="2020-08-25T13:30:33+00:00">
     <!-- <meta name=twitter:card content="summary">
     <meta name=twitter:title content="Archie">
     <meta name=twitter:description content> -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel=stylesheet>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel=stylesheet>
     <link rel="stylesheet" type="text/css" href="https://chponte.github.io/assets/css/main.css">
 </head>
 
 <body>
     <div class="content">
         <header>
-<div class="main">
-    <a href="https://chponte.github.io">Christian Ponte</a>
-</div>
-<nav>
-    
-    
+    <div class="main">
+        <a href="https://chponte.github.io">CHRISTIAN PONTE</a>
+    </div>
+    <nav>
         
-    
         
-            <a href="/">Home</a>
+            
         
-    
+            
+                <a href="/">home</a>
+            
         
-            <a href="/publications/">Publications</a>
+            
+                <a href="/publications/">publications</a>
+            
         
-    
+            
+                <a href="/software/">software</a>
+            
         
-            <a href="/software/">Software</a>
+            
+                <a href="/about/">about me</a>
+            
         
-    
-    <br>
-    
-        <a href="mailto:christian.ponte@udc.es" title="Email"><i class="fas fa-envelope"></i></a>
-    
-        <a href="https://twitter.com/chpont3" title="Twitter"><i class="fab fa-twitter"></i></a>
-    
-        <a href="https://github.com/chponte" title="Github"><i class="fab fa-github"></i></a>
-    
-        <a href="https://orcid.org/0000-0002-4728-6398" title="ORCID"><i class="fab fa-orcid"></i></a>
-    
-        <a href="https://www.researchgate.net/profile/Christian_Ponte-Fernandez" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-    
-</nav>
-
+    </nav>
 </header>
 
         <main>
-    <h1>
+    <h1>Fast search of third-order epistatic interactions on CPU and GPU clusters</h1>
+
+    <span class="info">
         
-        Fast search of third-order epistatic interactions on CPU and GPU clusters
-    </h1>
-    
-    <span class="badge-label">Journal: The International Journal of High Performance Computing Applications</span>
-    
-    <br>
-    <a href="https://doi.org/10.1177/1094342019852128">doi: 10.1177/1094342019852128</a>
+        The International Journal of High Performance Computing Applications
+        
+        <br>
+        <a href="https://doi.org/10.1177/1094342019852128">doi: 10.1177/1094342019852128</a>
+    </span>
+
     <h2>Authors</h2>
-    <ul>
+    <ul class="authors">
         
         
-        <li>Christian Ponte-Fernández</li>
         
-        <li>Jorge González-Domínguez</li>
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            Christian Ponte-Fernández
+            
+        </li>
         
-        <li>María J. Martín</li>
+        
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            <a href="http://gac.udc.es/~jorgeg/">Jorge González-Domínguez</a>
+            
+        </li>
+        
+        
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            <a href="https://pdi.udc.es/en/File/Pdi/GU89E">María J. Martín</a>
+            
+        </li>
         
     </ul>
 
-    <p>Some journal paper</p>
+    <h2 id="abstract">Abstract</h2>
+
+<p>Genome-Wide Association Studies (GWASs), analyses that try to find a link
+between a given phenotype (such as a disease) and genetic markers, have been
+growing in popularity in the recent years. Relations between phenotypes and
+genotypes are not easy to identify, as most of the phenotypes are a product of
+the interaction between multiple genes, a phenomenon known as epistasis. Many
+authors have resorted to different approaches and hardware architectures in
+order to mitigate the exponential time complexity of the problem. However, these
+studies make some compromises in order to keep a reasonable execution time, such
+as limiting the number of genetic markers involved in the interaction, or
+discarding some of these markers in an initial filtering stage. This work
+presents MPI3SNP, a tool that implements a three-way exhaustive search for
+cluster architectures with the aim of mitigating the exponential growth of the
+run-time. Modern cluster solutions usually incorporate GPUs. Thus, MPI3SNP
+includes implementations for both multi-CPU and multi-GPU clusters. To
+contextualize the performance achieved, MPI3SNP is able to analyze an input of
+6300 genetic markers and 3200 samples in less than 6 min using 768 CPU cores or
+4 min using 8 NVIDIA K80 GPUs. The source code is available at
+https://github.com/chponte/mpi3snp.</p>
+
 
 
     <a href="https://doi.org/10.1177/1094342019852128">Full text ⟶</a>
     
 </main>
 
-        <footer>
-    <hr>
+        <hr>
+
+<footer>
     Built with <a href="https://jekyllrb.com/">Jekyll</a> |
     © 2020 Christian Ponte |
-    Last updated: 20 April 2020
+    Last updated: 25 August 2020
 </footer>
-<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     </div>
 </body>
 

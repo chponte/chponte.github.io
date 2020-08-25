@@ -10,94 +10,117 @@
     <!-- <meta property="og:description" content> -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chponte.github.io">
-    <meta property="og:updated_time" content="2020-04-20T23:44:25+00:00">
+    <meta property="og:updated_time" content="2020-08-25T13:30:33+00:00">
     <!-- <meta name=twitter:card content="summary">
     <meta name=twitter:title content="Archie">
     <meta name=twitter:description content> -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel=stylesheet>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel=stylesheet>
     <link rel="stylesheet" type="text/css" href="https://chponte.github.io/assets/css/main.css">
 </head>
 
 <body>
     <div class="content">
         <header>
-<div class="main">
-    <a href="https://chponte.github.io">Christian Ponte</a>
-</div>
-<nav>
-    
-    
+    <div class="main">
+        <a href="https://chponte.github.io">CHRISTIAN PONTE</a>
+    </div>
+    <nav>
         
-    
         
-            <a href="/">Home</a>
+            
         
-    
+            
+                <a href="/">home</a>
+            
         
-            <a href="/publications/">Publications</a>
+            
+                <a href="/publications/">publications</a>
+            
         
-    
+            
+                <a href="/software/">software</a>
+            
         
-            <a href="/software/">Software</a>
+            
+                <a href="/about/">about me</a>
+            
         
-    
-    <br>
-    
-        <a href="mailto:christian.ponte@udc.es" title="Email"><i class="fas fa-envelope"></i></a>
-    
-        <a href="https://twitter.com/chpont3" title="Twitter"><i class="fab fa-twitter"></i></a>
-    
-        <a href="https://github.com/chponte" title="Github"><i class="fab fa-github"></i></a>
-    
-        <a href="https://orcid.org/0000-0002-4728-6398" title="ORCID"><i class="fab fa-orcid"></i></a>
-    
-        <a href="https://www.researchgate.net/profile/Christian_Ponte-Fernandez" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-    
-</nav>
-
+    </nav>
 </header>
 
         <main>
-    <h1>
+    <h1>Evaluation of OpenMP SIMD Directives on Xeon Phi Coprocessors</h1>
+
+    <span class="info">
         
-        Evaluation of OpenMP SIMD Directives on Xeon Phi Coprocessors
-    </h1>
-    
-    <span class="badge-label">Conference: 2017 International Conference on High Performance Computing & Simulation (HPCS)</span>
-    
-    <br>
-    <a href="https://doi.org/10.1109/HPCS.2017.65">doi: 10.1109/HPCS.2017.65</a>
+        2017 International Conference on High Performance Computing & Simulation
+        
+        <br>
+        <a href="https://doi.org/10.1109/HPCS.2017.65">doi: 10.1109/HPCS.2017.65</a>
+    </span>
+
     <h2>Authors</h2>
-    <ul>
+    <ul class="authors">
         
         
-        <li>Christian Ponte-Fernández</li>
         
-        <li>Jorge González-Domínguez</li>
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            Christian Ponte-Fernández
+            
+        </li>
         
-        <li>María J. Martín</li>
+        
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            <a href="http://gac.udc.es/~jorgeg/">Jorge González-Domínguez</a>
+            
+        </li>
+        
+        
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
+            <a href="https://pdi.udc.es/en/File/Pdi/GU89E">María J. Martín</a>
+            
+        </li>
         
     </ul>
 
     <h2 id="abstract">Abstract</h2>
 
-<blockquote>
-  <p>Nowadays, most of the available computer architectures include vector processing units. Therefore, exploiting this type of parallelism is fundamental to achieve the highest performance on modern systems. OpenMP is a parallel programming API based on a set of compiler directives. In its latest release (version 4) explicit vector programming through Single Instruction Multiple Data (SIMD) directives was added, among other features. This paper studies the ease of use and performance of these new SIMD directives, evaluated on an Intel Xeon Phi coprocessor. Three different applications are analysed and modified in order to improve vectorization. The evaluation of the obtained performance is done by comparison with the runtime of the same applications achieved by the compiler’s autovectorization. The final conclusion is that the benefits obtained by the OpenMP directives depend on the characteristics of the employed code: both runtimes stay on par on simple codes; however, on more complex codes where modifications have to be introduced, OpenMP SIMD vectorization surpasses the compiler’s autovectorization achieving up to 6.3x speedup with respect to the non-vectorized version on the Poisson’s equations solver.</p>
-</blockquote>
+<p>Nowadays, most of the available computer architectures include vector processing
+units. Therefore, exploiting this type of parallelism is fundamental to achieve
+the highest performance on modern systems. OpenMP is a parallel programming API
+based on a set of compiler directives. In its latest release (version 4)
+explicit vector programming through Single Instruction Multiple Data (SIMD)
+directives was added, among other features. This paper studies the ease of use
+and performance of these new SIMD directives, evaluated on an Intel Xeon Phi
+coprocessor. Three different applications are analysed and modified in order to
+improve vectorization. The evaluation of the obtained performance is done by
+comparison with the runtime of the same applications achieved by the compiler’s
+autovectorization. The final conclusion is that the benefits obtained by the
+OpenMP directives depend on the characteristics of the employed code: both
+runtimes stay on par on simple codes; however, on more complex codes where
+modifications have to be introduced, OpenMP SIMD vectorization surpasses the
+compiler’s autovectorization achieving up to 6.3x speedup with respect to the
+non-vectorized version on the Poisson’s equations solver.</p>
+
 
 
     <a href="https://doi.org/10.1109/HPCS.2017.65">Full text ⟶</a>
     
 </main>
 
-        <footer>
-    <hr>
+        <hr>
+
+<footer>
     Built with <a href="https://jekyllrb.com/">Jekyll</a> |
     © 2020 Christian Ponte |
-    Last updated: 20 April 2020
+    Last updated: 25 August 2020
 </footer>
-<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     </div>
 </body>
 
