@@ -47,10 +47,10 @@ permalink: /
                 {{ site.data.authors[author].authorname }}
                 {% endfor %}
             </span>
+            <p>
+                {{ p.abstract | truncatewords: 75 }}
+            </p>
         </li>
-        <p>
-            {{ p.abstract | truncatewords: 75 }}
-        </p>
         {% endfor %}
     </ul>
 
