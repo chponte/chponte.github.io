@@ -254,8 +254,9 @@ div.publication-buttons {
   width: 50%;
   float: right;
   text-align: right;
+  text-indent: 0;
+  font-size: 26px;
 }
-
 
 div.publication p {
   margin-top: 1em;

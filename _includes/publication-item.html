@@ -15,9 +15,13 @@
     <div class="publication-buttons">
       {% if p.type == "journal" %}
       {% if p.openaccess == true %}
-      <i class="ai ai-open-access fa-fw fa-2x"></i>
+      <i class="ai ai-open-access fa-fw"></i>
+      {% endif %}
+      {% if p.pubmed %}
+      <a href="https://pubmed.ncbi.nlm.nih.gov/{{p.pubmed}}/"><i class="ai ai-pubmed fa-fw"></i></a>
       {% endif %}
       {% endif %}
+      <a href="https://doi.org/{{p.doi}}"><i class="ai ai-doi fa-fw"></i></a>
     </div>
   </div>
   <h2><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></h2>
