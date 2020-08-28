@@ -29,6 +29,7 @@ socials:
 # Build settings
 plugins:
   - jekyll-analytics
+  - jekyll-sitemap
 
 collections:
   publications:

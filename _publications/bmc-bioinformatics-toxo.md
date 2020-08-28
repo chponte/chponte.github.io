@@ -8,6 +8,7 @@ shortjournal: "BMC Bioinformatics"
 doi: 10.1186/s12859-020-3456-3
 date: 2020-04-09
 openaccess: true
+pubmed: 32272874
 highlighted: true
 abstract: |
     Background<br>
