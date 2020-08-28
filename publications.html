@@ -6,60 +6,29 @@ permalink: /publications/
 ---
 
 <main class="list">
-    <h1>Journal papers:</h1>
-    {% assign publications = site.publications |
+  <h1>Journal papers:</h1>
+  {% assign publications = site.publications |
         where: "type", "journal" |
         sort:"date" |
         reverse %}
-    <ul>
-        {% for p in publications %}
-        <li>
-            {% if p.openaccess == true %}
-            <i class="ai ai-open-access fa-2x fa-fw "></i>
-            {% endif %}
-            <span class="info">
-                {{ p.shortjournal }} :: {{ p.date | date: "%-d %B %Y" }}
-            </span>
-            <h2 class="title">
-                <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
-            </h2>
-            <span class="info">
-                {% assign authors = p.authors | split: ", " %}
-                {% for author in authors %}
-                {{ site.data.authors[author].authorname }}
-                {% endfor %}
-            </span>
-        </li>
-        <p>
-            {{ p.abstract | truncatewords: 75 }}
-        </p>
-        {% endfor %}
-    </ul>
+  <ul>
+    {% for p in publications %}
+    <li>
+      {% include publication-item.html publication=p %}
+    </li>
+    {% endfor %}
+  </ul>
 
-    <h1>Conference papers:</h1>
-    {% assign publications = site.publications |
+  <h1>Conference papers:</h1>
+  {% assign publications = site.publications |
         where: "type", "conference" |
         sort:"date" |
         reverse %}
-    <ul>
-        {% for p in publications %}
-        <li>
-            <span class="info">
-                {{ p.shortconference }} :: {{ p.date | date: "%-d %B %Y" }}
-            </span>
-            <h2 class="title">
-                <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
-            </h2>
-            <span class="info">
-                {% assign authors = p.authors | split: ", " %}
-                {% for author in authors %}
-                {{ site.data.authors[author].authorname }}
-                {% endfor %}
-            </span>
-        </li>
-        <p>
-            {{ p.abstract | truncatewords: 75 }}
-        </p>
-        {% endfor %}
-    </ul>
+  <ul>
+    {% for p in publications %}
+    <li>
+      {% include publication-item.html publication=p %}
+    </li>
+    {% endfor %}
+  </ul>
 </main>
