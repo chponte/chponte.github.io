@@ -20,9 +20,9 @@ permalink: /
 
   <h1>Highlighted publications</h1>
   {% assign publications = site.publications |
-        where: "highlighted", "true" |
-        sort:"date" |
-        reverse %}
+    where: "highlighted", "true" |
+    sort:"date" |
+    reverse %}
   <ul>
     {% for p in publications %}
     <li>
@@ -32,4 +32,15 @@ permalink: /
   </ul>
 
   <h1>Highlighted software</h1>
+  {% assign software = site.software |
+    where: "highlighted", "true" |
+    sort:"date" |
+    reverse %}
+  <ul>
+    {% for s in software %}
+    <li>
+      {% include software-item.html software=s %}
+    </li>
+    {% endfor %}
+  </ul>
 </main>
