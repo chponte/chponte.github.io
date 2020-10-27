@@ -48,14 +48,14 @@
 </header>
 
         <main>
-    <h1>Fast search of third-order epistatic interactions on CPU and GPU clusters</h1>
+    <h1>Evaluation of Existing Methods for High-Order Epistasis Detection</h1>
 
     <span class="info">
         
-        The International Journal of High Performance Computing Applications
+        IEEE/ACM Transactions on Computational Biology and Bioinformatics
         
         <br>
-        <a href="https://doi.org/10.1177/1094342019852128">doi: 10.1177/1094342019852128</a>
+        <a href="https://doi.org/10.1109/TCBB.2020.3030312">doi: 10.1109/TCBB.2020.3030312</a>
     </span>
 
     <h2>Authors</h2>
@@ -79,6 +79,13 @@
         
         <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
             
+            <a href="http://acraaj.webs.uvigo.es/">Antonio Carvajal-Rodríguez</a>
+            
+        </li>
+        
+        
+        <li><i class="fas fa-pencil-alt fa-sm fa-fw"></i>
+            
             <a href="https://pdi.udc.es/en/File/Pdi/GU89E">María J. Martín</a>
             
         </li>
@@ -87,28 +94,11 @@
 
     <h2 id="abstract">Abstract</h2>
 
-<p>Genome-Wide Association Studies (GWASs), analyses that try to find a link
-between a given phenotype (such as a disease) and genetic markers, have been
-growing in popularity in the recent years. Relations between phenotypes and
-genotypes are not easy to identify, as most of the phenotypes are a product of
-the interaction between multiple genes, a phenomenon known as epistasis. Many
-authors have resorted to different approaches and hardware architectures in
-order to mitigate the exponential time complexity of the problem. However, these
-studies make some compromises in order to keep a reasonable execution time, such
-as limiting the number of genetic markers involved in the interaction, or
-discarding some of these markers in an initial filtering stage. This work
-presents MPI3SNP, a tool that implements a three-way exhaustive search for
-cluster architectures with the aim of mitigating the exponential growth of the
-run-time. Modern cluster solutions usually incorporate GPUs. Thus, MPI3SNP
-includes implementations for both multi-CPU and multi-GPU clusters. To
-contextualize the performance achieved, MPI3SNP is able to analyze an input of
-6300 genetic markers and 3200 samples in less than 6 min using 768 CPU cores or
-4 min using 8 NVIDIA K80 GPUs. The source code is available at
-https://github.com/chponte/mpi3snp.</p>
+<p>Finding epistatic interactions among loci when expressing a phenotype is a widely employed strategy to understand the genetic architecture of complex traits in GWAS. The abundance of methods dedicated to the same purpose, however, makes it increasingly difficult for scientists to decide which method is more suitable for their studies. This work compares the different epistasis detection methods published during the last decade in terms of runtime, detection power and type I error rate, with a special emphasis on high-order interactions. Results show that in terms of detection power, the only methods that perform well across all experiments are the exhaustive methods, although their computational cost may be prohibitive in large-scale studies. Regarding non-exhaustive methods, not one could consistently find epistasis interactions when marginal effects are absent. If marginal effects are present, there are methods that perform well for high-order interactions, such as BADTrees, FDHE-IW, SingleMI or SNPHarvester. As for false-positive control, only SNPHarvester, FDHE-IW and DCHE show good results. The study concludes that there is no single epistasis detection method to recommend in all scenarios. Authors should prioritize exhaustive methods when sufficient computational resources are available considering the data set size, and resort to non-exhaustive methods when the analysis time is prohibitive.</p>
 
 
 
-    <a href="https://doi.org/10.1177/1094342019852128">Full text ⟶</a>
+    <a href="https://doi.org/10.1109/TCBB.2020.3030312">Full text ⟶</a>
     
 </main>
 
